@@ -1,0 +1,48 @@
+{
+    "name": "furnishop-website",
+    "version": "1.0.0",
+    "description": "Modern furniture e-commerce website with smooth animations and responsive design",
+    "main": "index.html",
+    "scripts": {
+        "dev": "live-server --port=3000 --open=/index.html",
+        "build": "npm run build:css && npm run build:js",
+        "build:css": "tailwindcss -i ./styles.css -o ./dist/styles.min.css --minify",
+        "build:js": "esbuild script.js --bundle --minify --outfile=dist/script.min.js",
+        "lint": "eslint script.js",
+        "format": "prettier --write *.html *.css *.js *.ts",
+        "type-check": "tsc --noEmit",
+        "serve": "python3 -m http.server 8000",
+        "preview": "npm run build && npm run serve"
+    },
+    "keywords": [
+        "furniture",
+        "ecommerce",
+        "responsive",
+        "tailwind",
+        "typescript",
+        "animations",
+        "modern-ui"
+    ],
+    "author": "FurniShop Team",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/node": "^20.0.0",
+        "esbuild": "^0.19.0",
+        "eslint": "^8.50.0",
+        "live-server": "^1.2.2",
+        "prettier": "^3.0.0",
+        "tailwindcss": "^3.3.0",
+        "typescript": "^5.0.0"
+    },
+    "dependencies": {
+        "intersection-observer": "^0.12.2"
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not dead"
+    ],
+    "engines": {
+        "node": ">=16.0.0"
+    }
+}

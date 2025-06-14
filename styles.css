@@ -1,0 +1,842 @@
+/* Custom CSS for FurniShop */
+
+/* Smooth scrolling behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hero section specific styles to match Figma */
+#hero {
+    height: 100vh;
+    position: relative;
+}
+
+/* Complex gradient overlay to match Figma exactly */
+#hero .bg-gradient-to-b:first-of-type {
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.3) 0%,
+            transparent 40%,
+            rgba(0, 0, 0, 1) 100%);
+}
+
+#hero .bg-gradient-to-t {
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 1) 0%,
+            transparent 40%,
+            rgba(0, 0, 0, 0) 100%);
+}
+
+#hero .bg-gradient-to-b:last-of-type {
+    background: linear-gradient(to bottom,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.6) 25.7%,
+            rgba(255, 255, 255, 1) 38.5%);
+    top: 60%;
+}
+
+/* Pin indicators styling */
+.pin-indicator {
+    animation: pulse-slow 2s ease-in-out infinite;
+    cursor: pointer;
+}
+
+.pin-indicator:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.pin-indicator:nth-child(2) {
+    animation-delay: 0.7s;
+}
+
+.pin-indicator:nth-child(3) {
+    animation-delay: 1.4s;
+}
+
+.pin-indicator:hover {
+    transform: scale(1.2);
+}
+
+/* Statistics card exact styling to match Figma */
+.bg-primary {
+    background: #286F6C;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+}
+
+/* Floating statistics card enhanced styling */
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+    }
+
+    50% {
+        transform: translateY(-8px);
+        box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.5);
+    }
+}
+
+/* Statistics card hover effects */
+.bg-primary:hover {
+    box-shadow: 0 35px 70px -12px rgba(0, 0, 0, 0.6);
+}
+
+/* Individual stat hover effects */
+.group:hover h3 {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Separator lines for floating card */
+.bg-primary .w-px {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+/* Typography adjustments to match Figma exactly */
+#hero h2 {
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#hero p {
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 60ch;
+}
+
+/* CTA Button styling to match Figma exactly */
+#hero button {
+    background: rgba(226, 226, 226, 0.4);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    border-radius: 10px;
+    padding: 16px 80px;
+}
+
+/* Navigation brand styling */
+nav h1 {
+    font-weight: 700;
+    line-height: 1.574;
+}
+
+/* Navigation links styling */
+nav a {
+    line-height: 1.574;
+    font-weight: 600;
+}
+
+nav a:not(.font-semibold) {
+    font-weight: 400;
+}
+
+/* Statistics card separators */
+.bg-primary .w-px {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.bg-primary .h-px {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Hide scrollbar for category slider */
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
+}
+
+/* Custom scrollbar for category slider (optional visible scrollbar) */
+.categories-scrollbar::-webkit-scrollbar {
+    height: 4px;
+}
+
+.categories-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 2px;
+}
+
+.categories-scrollbar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 2px;
+}
+
+.categories-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #hero h2 {
+        font-size: 48px;
+        line-height: 1.2;
+    }
+
+    #hero p {
+        font-size: 18px;
+    }
+
+    #hero button {
+        padding: 16px 40px;
+        font-size: 18px;
+    }
+
+    .pin-indicator {
+        display: none;
+    }
+
+    .min-w-80 {
+        min-width: 280px;
+    }
+}
+
+/* Category slider mobile optimizations */
+@media (max-width: 640px) {
+    #categories-slider {
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .category-card {
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+    }
+
+    /* Ensure cards don't shrink below minimum size */
+    .category-card {
+        min-width: 200px;
+        max-width: 200px;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 767px) {
+    .category-card {
+        min-width: 240px;
+        max-width: 240px;
+    }
+}
+
+@media (min-width: 768px) {
+    .category-card {
+        min-width: 265px;
+        max-width: 265px;
+    }
+}
+
+/* Improve touch targets for mobile navigation buttons */
+@media (max-width: 640px) {
+
+    #slider-prev,
+    #slider-next {
+        min-width: 32px;
+        min-height: 32px;
+        touch-action: manipulation;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #286F6C;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1e5855;
+}
+
+/* Loading states */
+.loading {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Enhanced hover effects */
+.product-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.product-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(40, 111, 108, 0.1), rgba(35, 38, 47, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: inherit;
+    z-index: 1;
+}
+
+.product-card:hover::before {
+    opacity: 1;
+}
+
+.category-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.category-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+    z-index: 2;
+}
+
+.category-card:hover::before {
+    left: 100%;
+}
+
+.category-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, rgba(40, 111, 108, 0.3), rgba(35, 38, 47, 0.3));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.category-card:hover::after {
+    opacity: 1;
+}
+
+/* Advanced floating animation */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes floatReverse {
+
+    0%,
+    100% {
+        transform: translateY(-5px);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+}
+
+.float {
+    animation: float 3s ease-in-out infinite;
+}
+
+.float-reverse {
+    animation: floatReverse 4s ease-in-out infinite;
+}
+
+/* Enhanced glowing effect for CTA buttons */
+.glow-on-hover {
+    position: relative;
+    background: linear-gradient(45deg, #286F6C, #23262F);
+    background-size: 400%;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.glow-on-hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.6s;
+}
+
+.glow-on-hover:hover::before {
+    left: 100%;
+}
+
+.glow-on-hover:hover {
+    animation: glow 1.5s ease-in-out infinite alternate;
+    transform: scale(1.05);
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px #286F6C, 0 0 20px #286F6C, 0 0 30px #286F6C;
+    }
+
+    to {
+        box-shadow: 0 0 20px #286F6C, 0 0 30px #286F6C, 0 0 40px #286F6C;
+    }
+}
+
+/* Parallax containers */
+.parallax {
+    transform-style: preserve-3d;
+}
+
+.parallax-layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+/* Advanced text animations */
+.text-reveal {
+    overflow: hidden;
+}
+
+.text-reveal span {
+    display: inline-block;
+    animation: textReveal 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+@keyframes textReveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Typing animation */
+.typing-animation {
+    overflow: hidden;
+    border-right: 3px solid #286F6C;
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #286F6C;
+    }
+}
+
+/* Enhanced card flip effect */
+.flip-card {
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: inherit;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+
+/* Particle animation background */
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.particle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: particleFloat 15s infinite linear;
+}
+
+@keyframes particleFloat {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Magnetic button effect */
+.magnetic-btn {
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    cursor: pointer;
+}
+
+.magnetic-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Advanced gradient text */
+.gradient-text {
+    background: linear-gradient(45deg, #286F6C, #23262F, #286F6C);
+    background-size: 200% 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Staggered animations */
+.stagger-children>* {
+    animation-delay: calc(var(--stagger-delay, 0.1s) * var(--stagger-index, 0));
+}
+
+/* Modern glassmorphism effect */
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-dark {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Loading skeleton animation */
+.skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s infinite;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Custom focus styles */
+.focus-ring:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(40, 111, 108, 0.3);
+}
+
+/* Keyboard navigation styles */
+.keyboard-navigation *:focus {
+    outline: 2px solid #286F6C !important;
+    outline-offset: 2px !important;
+}
+
+/* Ripple effect */
+.ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.ripple:active::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Advanced button states */
+.btn-primary {
+    background: linear-gradient(45deg, #286F6C, #23262F);
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(40, 111, 108, 0.3);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* Image lazy loading effect */
+.lazy-load {
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.lazy-load.loaded {
+    opacity: 1;
+}
+
+/* Section entrance animations */
+.section-enter {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section-enter.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Counter animation styles */
+.counter {
+    font-feature-settings: 'tnum';
+    font-variant-numeric: tabular-nums;
+}
+
+/* Responsive utilities */
+@media (max-width: 640px) {
+    .text-responsive {
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
+    }
+
+    .product-card:hover {
+        transform: translateY(-4px) scale(1.01);
+    }
+
+    .category-card:hover {
+        transform: translateY(-5px) scale(1.01);
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .product-card {
+        border: 2px solid #000;
+    }
+
+    .category-card {
+        border: 2px solid #000;
+    }
+
+    .glass {
+        border: 2px solid rgba(0, 0, 0, 0.5);
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    ::before,
+    ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .parallax {
+        transform: none !important;
+    }
+}
+
+/* Print styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+
+    body {
+        background: white !important;
+        color: black !important;
+    }
+
+    .glass,
+    .glow-on-hover {
+        background: white !important;
+        border: 1px solid black !important;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .auto-dark {
+        background-color: #1a1a1a;
+        color: #ffffff;
+    }
+
+    .glass {
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* Best Furniture Manufacturer Section Styles */
+#best-furniture {
+    background: #ffffff;
+}
+
+#best-furniture h2 {
+    color: #23262F !important;
+}
+
+#best-furniture img {
+    transition: transform 0.6s ease-out;
+}
+
+#best-furniture:hover img {
+    transform: scale(1.02);
+}
+
+/* Enhanced shadow for the image */
+#best-furniture .shadow-2xl {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25),
+        0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 1024px) {
+    #best-furniture h2 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+}
+
+@media (max-width: 768px) {
+    #best-furniture h2 {
+        font-size: 2rem;
+        line-height: 1.3;
+    }
+
+    #best-furniture p {
+        font-size: 1rem;
+    }
+}
