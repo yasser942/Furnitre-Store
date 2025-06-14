@@ -5,9 +5,10 @@
     "main": "index.html",
     "scripts": {
         "dev": "live-server --port=3000 --open=/index.html",
-        "build": "npm run build:css && npm run build:js",
-        "build:css": "tailwindcss -i ./styles.css -o ./dist/styles.min.css --minify",
-        "build:js": "esbuild script.js --bundle --minify --outfile=dist/script.min.js",
+        "build": "npm run build:css && npm run build:js && npm run build:prepare",
+        "build:css": "tailwindcss -i ./styles.css -o ./public/dist/styles.min.css --minify",
+        "build:js": "esbuild script.js --bundle --minify --outfile=public/dist/script.min.js",
+        "build:prepare": "node build.js",
         "lint": "eslint script.js",
         "format": "prettier --write *.html *.css *.js *.ts",
         "type-check": "tsc --noEmit",

@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FurniShop - Creative Home Furniture</title>
+    <link rel="stylesheet" href="dist/styles.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Saira:wght@400;500;600;700&family=Raleway:wght@400;500;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+</head>
+
+<body class="font-saira bg-white">
+    <!-- Hero Section -->
+    <section id="hero" class="h-screen relative overflow-hidden">
+        <!-- Background Images with Complex Overlay -->
+        <div class="absolute inset-0">
+            <!-- Main background image -->
+            <img src="images/hero-living-room.jpg" alt="Modern Living Room Interior" class="w-full h-full object-cover">
+
+            <!-- Multiple gradient overlays to match Figma design -->
+            <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/100"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/100 via-transparent to-black/0"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-white/0 via-white/60 to-white/100" style="top: 60%;">
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="relative z-10 flex items-center justify-between px-6 md:px-12 lg:px-20 py-8">
+            <div class="animate-slide-in-left">
+                <h1 class="text-white text-nav-brand font-bold font-saira">FurniShop</h1>
+            </div>
+
+            <div class="hidden md:flex items-center space-x-16 animate-fade-in">
+                <a href="#home"
+                    class="text-white font-semibold text-nav-link hover:text-primary transition-colors duration-300">Home</a>
+                <a href="#about"
+                    class="text-white text-nav-link hover:text-gray-300 transition-colors duration-300">About</a>
+                <a href="#features-main"
+                    class="text-white text-nav-link hover:text-gray-300 transition-colors duration-300">Features</a>
+                <a href="#contact"
+                    class="text-white text-nav-link hover:text-gray-300 transition-colors duration-300">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-white p-2">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute top-20 left-0 right-0 bg-black/90 backdrop-blur-lg z-20 p-6">
+            <div class="flex flex-col space-y-4">
+                <a href="#home"
+                    class="text-white font-semibold hover:text-primary transition-colors duration-300">Home</a>
+                <a href="#about" class="text-white hover:text-gray-300 transition-colors duration-300">About</a>
+                <a href="#features-main"
+                    class="text-white hover:text-gray-300 transition-colors duration-300">Features</a>
+                <a href="#contact" class="text-white hover:text-gray-300 transition-colors duration-300">Contact</a>
+            </div>
+        </div>
+
+        <!-- Hero Content - Centered Layout -->
+        <div class="relative z-10 flex flex-col items-center justify-center h-full px-6 md:px-12 lg:px-20 text-center"
+            style="margin-top: -80px;">
+            <!-- Main Heading -->
+            <h2
+                class="text-white text-hero-lg md:text-hero-xl font-semibold font-saira leading-tight mb-8 animate-slide-up tracking-wide max-w-5xl text-center">Creative Home Simplify Your</h2>
+            <h2
+                class="text-white text-hero-lg md:text-hero-xl font-semibold font-saira leading-tight mb-8 animate-slide-up tracking-wide max-w-5xl text-center">Furniture</h2>
+            <!-- Description -->
+            <p class="text-white text-hero-desc mb-12 leading-relaxed max-w-4xl animate-slide-up font-saira"
+                style="animation-delay: 0.2s;">
+                Do i have consent to record this meeting gain locaion, root-and-branch, review, nor game plan who's the
+                goto
+            </p>
+
+            <!-- CTA Button -->
+            <button
+                class="bg-white/40 backdrop-blur-30 text-white px-20 py-5 rounded-xl font-semibold text-xl hover:bg-white/50 transition-all duration-300 transform hover:scale-105 animate-slide-up font-saira"
+                style="animation-delay: 0.4s;">
+                Shop Now
+            </button>
+        </div>
+
+        <!-- Pin Indicators -->
+        <div class="absolute top-1/2 right-16 z-10 space-y-6 hidden lg:block transform -translate-y-1/2">
+            <div class="pin-indicator">
+                <div
+                    class="w-5 h-5 rounded-full bg-white/20 backdrop-blur-lg border border-white/30 relative cursor-pointer hover:scale-110 transition-transform duration-300">
+                    <div
+                        class="w-2.5 h-2.5 rounded-full bg-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    </div>
+                </div>
+            </div>
+            <div class="pin-indicator">
+                <div
+                    class="w-5 h-5 rounded-full bg-white/20 backdrop-blur-lg border border-white/30 relative cursor-pointer hover:scale-110 transition-transform duration-300">
+                    <div
+                        class="w-2.5 h-2.5 rounded-full bg-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    </div>
+                </div>
+            </div>
+            <div class="pin-indicator">
+                <div
+                    class="w-5 h-5 rounded-full bg-white/20 backdrop-blur-lg border border-white/30 relative cursor-pointer hover:scale-110 transition-transform duration-300">
+                    <div
+                        class="w-2.5 h-2.5 rounded-full bg-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Bar - Stacked Above Opacity Line -->
+    <section class="relative -mt-48 md:-mt-56 lg:-mt-64 z-20">
+        <div class="w-full px-8 md:px-16 lg:px-24 xl:px-32">
+            <div
+                class="bg-primary rounded-3xl p-12 md:p-20 shadow-2xl transform hover:scale-105 transition-all duration-500 animate-float relative">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-16 md:gap-24 lg:gap-32 text-center relative">
+                    <!-- Stat 1 -->
+                    <div class="animate-slide-up group cursor-pointer" style="animation-delay: 0.1s;">
+                        <h3 class="text-white text-stat-number font-semibold font-saira mb-1 group-hover:scale-110 transition-transform duration-300"
+                            data-counter="7">7</h3>
+                        <p
+                            class="text-white text-stat-label font-saira leading-tight opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                            Year Experience</p>
+                    </div>
+
+                    <!-- Stat 2 -->
+                    <div class="animate-slide-up group cursor-pointer" style="animation-delay: 0.2s;">
+                        <h3 class="text-white text-stat-number font-semibold font-saira mb-1 group-hover:scale-110 transition-transform duration-300"
+                            data-counter="2">2</h3>
+                        <p
+                            class="text-white text-stat-label font-saira leading-tight opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                            Opened in the country</p>
+                    </div>
+
+                    <!-- Stat 3 -->
+                    <div class="animate-slide-up group cursor-pointer" style="animation-delay: 0.3s;">
+                        <h3 class="text-white text-stat-number font-semibold font-saira mb-1 group-hover:scale-110 transition-transform duration-300"
+                            data-counter="260">260+</h3>
+                        <p
+                            class="text-white text-stat-label font-saira leading-tight opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                            Variant Furniture</p>
+                    </div>
+
+                    <!-- Stat 4 -->
+                    <div class="animate-slide-up group cursor-pointer" style="animation-delay: 0.4s;">
+                        <h3 class="text-white text-stat-number font-semibold font-saira mb-1 group-hover:scale-110 transition-transform duration-300"
+                            data-counter="10000">10k+</h3>
+                        <p
+                            class="text-white text-stat-label font-saira leading-tight opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                            Furniture sold</p>
+                    </div>
+                </div>
+
+                <!-- Separator Lines - Only visible on desktop -->
+                <div class="hidden md:block absolute top-12 bottom-12 left-1/4 w-px bg-white/20"></div>
+                <div class="hidden md:block absolute top-12 bottom-12 left-2/4 w-px bg-white/20"></div>
+                <div class="hidden md:block absolute top-12 bottom-12 left-3/4 w-px bg-white/20"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Features Section -->
+    <section id="features-additional" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
+            <div class="grid lg:grid-cols-2 gap-16 items-center mb-24">
+                <!-- Left - Image -->
+                <div class="animate-slide-in-left">
+                    <div class="relative">
+                        <img src="images/features-image.jpg" alt="Modern Interior"
+                            class="w-full rounded-lg shadow-2xl object-cover" style="width: 554px; height: 443px;">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
+                    </div>
+                </div>
+
+                <!-- Right - Content -->
+                <div class="animate-slide-in-right">
+                    <h2 class="text-dark text-3xl md:text-4xl font-semibold mb-6">We Create your home more aesthetic
+                    </h2>
+                    <p class="text-dark text-lg mb-8 leading-relaxed">
+                        Furniture power is a software as services for multipurpose business management system,
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4 feature-item">
+                            <div class="flex-shrink-0 w-8 h-8 bg-black rounded-full flex items-center justify-center">
+                                <i class="fas fa-check text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-dark font-semibold text-lg mb-2">Valuation Services</h3>
+                                <p class="text-dark leading-relaxed">Sometimes features require a short description.
+                                    This can be detailed description</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 feature-item">
+                            <div class="flex-shrink-0 w-8 h-8 bg-black rounded-full flex items-center justify-center">
+                                <i class="fas fa-check text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-dark font-semibold text-lg mb-2">Development of Furniture Models</h3>
+                                <p class="text-dark leading-relaxed">Sometimes features require a short description.
+                                    This can be detailed description</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="py-8 md:py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <!-- Left - Title Content -->
+                <div class="text-left mb-6 lg:mb-0">
+                    <h2 class="text-dark text-2xl md:text-3xl lg:text-4xl font-semibold mb-2 animate-slide-up">New In
+                    </h2>
+                    <h2 class="text-dark text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 lg:mb-6 animate-slide-up">Store Now</h2>
+                    <p class="text-dark text-base md:text-lg animate-slide-up max-w-md mb-6 lg:mb-8"
+                        style="animation-delay: 0.1s;">Get the
+                        latest
+                        items immediately with promo prices</p>
+
+                    <button
+                        class="inline-flex items-center text-dark font-medium hover:text-primary transition-colors duration-300 group">
+                        Check All
+                        <i
+                            class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                    </button>
+                </div>
+
+                <!-- Right - Category Cards -->
+                <div class="relative overflow-hidden">
+                    <!-- Cards Container -->
+                    <div id="categories-slider"
+                        class="flex overflow-x-auto scrollbar-hide gap-4 md:gap-6 pb-4 -mx-4 px-4 md:mx-0 md:px-0"
+                        style="scroll-behavior: smooth;">
+                        <div class="category-card group cursor-pointer animate-scale-in shadow-lg hover:shadow-xl transition-all duration-300 flex-shrink-0 w-[200px] h-[280px] sm:w-[240px] sm:h-[320px] md:w-[265px] md:h-[400px]"
+                            style="animation-delay: 0.1s; border-radius: 5px;">
+                            <div class="relative overflow-hidden w-full h-full" style="border-radius: 5px;">
+                                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                                    alt="Chair"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    style="border-radius: 5px;">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"
+                                    style="border-radius: 5px;">
+                                </div>
+                                <div class="absolute bottom-4 left-4 md:bottom-6 md:left-6">
+                                    <h3
+                                        class="text-white text-lg md:text-xl font-semibold group-hover:text-primary transition-colors duration-300">
+                                        Chair</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category-card group cursor-pointer animate-scale-in shadow-lg hover:shadow-xl transition-all duration-300 flex-shrink-0 w-[200px] h-[280px] sm:w-[240px] sm:h-[320px] md:w-[265px] md:h-[400px]"
+                            style="animation-delay: 0.2s; border-radius: 5px;">
+                            <div class="relative overflow-hidden w-full h-full" style="border-radius: 5px;">
+                                <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                                    alt="Bed"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    style="border-radius: 5px;">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"
+                                    style="border-radius: 5px;">
+                                </div>
+                                <div class="absolute bottom-4 left-4 md:bottom-6 md:left-6">
+                                    <h3
+                                        class="text-white text-lg md:text-xl font-semibold group-hover:text-primary transition-colors duration-300">
+                                        Bed</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category-card group cursor-pointer animate-scale-in shadow-lg hover:shadow-xl transition-all duration-300 flex-shrink-0 w-[200px] h-[280px] sm:w-[240px] sm:h-[320px] md:w-[265px] md:h-[400px]"
+                            style="animation-delay: 0.3s; border-radius: 5px;">
+                            <div class="relative overflow-hidden w-full h-full" style="border-radius: 5px;">
+                                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                                    alt="Cupboard"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    style="border-radius: 5px;">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"
+                                    style="border-radius: 5px;">
+                                </div>
+                                <div class="absolute bottom-4 left-4 md:bottom-6 md:left-6">
+                                    <h3
+                                        class="text-white text-lg md:text-xl font-semibold group-hover:text-primary transition-colors duration-300">
+                                        Cupboard</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category-card group cursor-pointer animate-scale-in shadow-lg hover:shadow-xl transition-all duration-300 flex-shrink-0 w-[200px] h-[280px] sm:w-[240px] sm:h-[320px] md:w-[265px] md:h-[400px]"
+                            style="animation-delay: 0.4s; border-radius: 5px;">
+                            <div class="relative overflow-hidden w-full h-full" style="border-radius: 5px;">
+                                <img src="https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                                    alt="Lighting"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    style="border-radius: 5px;">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"
+                                    style="border-radius: 5px;">
+                                </div>
+                                <div class="absolute bottom-4 left-4 md:bottom-6 md:left-6">
+                                    <h3
+                                        class="text-white text-lg md:text-xl font-semibold group-hover:text-primary transition-colors duration-300">
+                                        Lighting</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Arrows -->
+                    <button id="slider-prev"
+                        class="absolute left-2 md:left-0 top-1/2 transform -translate-y-1/2 md:-translate-x-4 w-8 h-8 md:w-10 md:h-10 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors duration-300 z-10 opacity-90 md:opacity-100">
+                        <i class="fas fa-chevron-left text-dark text-sm"></i>
+                    </button>
+                    <button id="slider-next"
+                        class="absolute right-2 md:right-0 top-1/2 transform -translate-y-1/2 md:translate-x-4 w-8 h-8 md:w-10 md:h-10 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors duration-300 z-10 opacity-90 md:opacity-100">
+                        <i class="fas fa-chevron-right text-dark text-sm"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Furniture Manufacturer Section -->
+    <section id="best-furniture" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <!-- Left - Content -->
+                <div class="animate-slide-in-left">
+                    <h2 class="text-dark font-semibold mb-6 font-saira capitalize"
+                        style="font-size: 40px; line-height: 130%; letter-spacing: 0%; font-weight: 600;">The Best Furniture<br>Manufacturer Of Your Choice
+                    </h2>
+                    <p class="text-dark/70 text-lg leading-relaxed max-w-lg">
+                        Furnitre power is a software as services for multiperpase business management system, especially
+                        for them who are running two or more business explore the future Furnitre power is a software as
+                        services
+                    </p>
+                </div>
+
+                <!-- Right - Image -->
+                <div class="animate-slide-in-right">
+                    <div class="relative rounded overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                            alt="Modern Kitchen Interior with Wooden Elements" class="w-full h-auto object-cover"
+                            style="width: 554px; height: 399px;">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
+            <div class="text-center mb-16">
+                <h2 class="text-dark text-3xl md:text-4xl font-semibold mb-4 animate-slide-up">All Product</h2>
+                <p class="text-dark text-lg max-w-3xl mx-auto animate-slide-up" style="animation-delay: 0.1s;">
+                    The products we provide only for you as our service are selected from the best products with number
+                    1 quality in the world
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12">
+                <!-- Product Card 1 -->
+                <div class="group cursor-pointer animate-scale-in" style="animation-delay: 0.1s;">
+                    <div class="bg-white overflow-hidden hover:shadow-lg transition-all duration-300">
+                        <div
+                            class="relative bg-gray-50 p-6 h-56 flex items-center justify-center border border-gray-200 rounded-lg">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                                alt="Ceiling Light"
+                                class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 text-left">
+                            <h3 class="text-dark font-semibold text-lg mb-2">Ceiling Light</h3>
+                            <div class="flex items-center space-x-2">
+                                <p class="text-dark font-bold text-lg">$75.00</p>
+                                <p class="text-gray-400 text-sm line-through">$85.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="group cursor-pointer animate-scale-in" style="animation-delay: 0.2s;">
+                    <div class="bg-white overflow-hidden hover:shadow-lg transition-all duration-300">
+                        <div
+                            class="relative bg-gray-50 p-6 h-56 flex items-center justify-center border border-gray-200 rounded-lg">
+                            <img src="https://images.unsplash.com/photo-1549497538-303791108f95?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                                alt="Wood Chair"
+                                class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 text-left">
+                            <h3 class="text-dark font-semibold text-lg mb-2">Wood Chair</h3>
+                            <div class="flex items-center space-x-2">
+                                <p class="text-dark font-bold text-lg">$50.00</p>
+                                <p class="text-gray-400 text-sm line-through">$70.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="group cursor-pointer animate-scale-in" style="animation-delay: 0.3s;">
+                    <div class="bg-white overflow-hidden hover:shadow-lg transition-all duration-300">
+                        <div
+                            class="relative bg-gray-50 p-6 h-56 flex items-center justify-center border border-gray-200 rounded-lg">
+                            <img src="https://images.unsplash.com/photo-1493663284031-b7e3aaa4cab7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                                alt="Papper Cupboard"
+                                class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 text-left">
+                            <h3 class="text-dark font-semibold text-lg mb-2">Papper Cupboard</h3>
+                            <div class="flex items-center space-x-2">
+                                <p class="text-dark font-bold text-lg">$105.00</p>
+                                <p class="text-gray-400 text-sm line-through">$120.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="group cursor-pointer animate-scale-in" style="animation-delay: 0.4s;">
+                    <div class="bg-white overflow-hidden hover:shadow-lg transition-all duration-300">
+                        <div
+                            class="relative bg-gray-50 p-6 h-56 flex items-center justify-center border border-gray-200 rounded-lg">
+                            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                                alt="Ole Gundorse Spring"
+                                class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 text-left">
+                            <h3 class="text-dark font-semibold text-lg mb-2">Ole Gundorse Spring...</h3>
+                            <div class="flex items-center space-x-2">
+                                <p class="text-dark font-bold text-lg">$82.00</p>
+                                <p class="text-gray-400 text-sm line-through">$100.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 5 -->
+                <div class="group cursor-pointer animate-scale-in" style="animation-delay: 0.5s;">
+                    <div class="bg-white overflow-hidden hover:shadow-lg transition-all duration-300">
+                        <div
+                            class="relative bg-gray-50 p-6 h-56 flex items-center justify-center border border-gray-200 rounded-lg">
+                            <img src="https://images.unsplash.com/photo-1549497538-303791108f95?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                                alt="Treos Series #1"
+                                class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 text-left">
+                            <h3 class="text-dark font-semibold text-lg mb-2">Treos Seroes 911</h3>
+                            <div class="flex items-center space-x-2">
+                                <p class="text-dark font-bold text-lg">$200.00</p>
+                                <p class="text-gray-400 text-sm line-through">$300.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 6 -->
+                <div class="group cursor-pointer animate-scale-in" style="animation-delay: 0.6s;">
+                    <div class="bg-white overflow-hidden hover:shadow-lg transition-all duration-300">
+                        <div
+                            class="relative bg-gray-50 p-6 h-56 flex items-center justify-center border border-gray-200 rounded-lg">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                                alt="Multi Biderman Slibber..."
+                                class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 text-left">
+                            <h3 class="text-dark font-semibold text-lg mb-2">Multi Bilderman Slibber...</h3>
+                            <div class="flex items-center space-x-2">
+                                <p class="text-dark font-bold text-lg">$45.00</p>
+                                <p class="text-gray-400 text-sm line-through">$90.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 7 -->
+                <div class="group cursor-pointer animate-scale-in" style="animation-delay: 0.7s;">
+                    <div class="bg-white overflow-hidden hover:shadow-lg transition-all duration-300">
+                        <div
+                            class="relative bg-gray-50 p-6 h-56 flex items-center justify-center border border-gray-200 rounded-lg">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                                alt="XORA Corner Desk"
+                                class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 text-left">
+                            <h3 class="text-dark font-semibold text-lg mb-2">XORA Corner Desk</h3>
+                            <div class="flex items-center space-x-2">
+                                <p class="text-dark font-bold text-lg">$320.00</p>
+                                <p class="text-gray-400 text-sm line-through">$325.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 8 -->
+                <div class="group cursor-pointer animate-scale-in" style="animation-delay: 0.8s;">
+                    <div class="bg-white overflow-hidden hover:shadow-lg transition-all duration-300">
+                        <div
+                            class="relative bg-gray-50 p-6 h-56 flex items-center justify-center border border-gray-200 rounded-lg">
+                            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                                alt="Black Forest Series Wood"
+                                class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 text-left">
+                            <h3 class="text-dark font-semibold text-lg mb-2">Black Forest Series Wo...</h3>
+                            <div class="flex items-center space-x-2">
+                                <p class="text-dark font-bold text-lg">$225.00</p>
+                                <p class="text-gray-400 text-sm line-through">$240.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="flex justify-center items-center space-x-4 mt-12">
+                <button
+                    class="w-10 h-10 bg-white border border-gray-200 rounded-full shadow-sm flex items-center justify-center hover:bg-gray-50 transition-colors duration-300">
+                    <i class="fas fa-chevron-left text-dark text-sm"></i>
+                </button>
+
+                <div class="flex space-x-2">
+                    <button class="w-3 h-3 bg-dark rounded-full"></button>
+                    <button class="w-3 h-3 border border-gray-300 rounded-full bg-white"></button>
+                    <button class="w-3 h-3 border border-gray-300 rounded-full bg-white"></button>
+                    <button class="w-3 h-3 border border-gray-300 rounded-full bg-white"></button>
+                    <button class="w-3 h-3 border border-gray-300 rounded-full bg-white"></button>
+                </div>
+
+                <button
+                    class="w-10 h-10 bg-white border border-gray-200 rounded-full shadow-sm flex items-center justify-center hover:bg-gray-50 transition-colors duration-300">
+                    <i class="fas fa-chevron-right text-dark text-sm"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section id="testimonial" class="py-16 md:py-24 bg-gray">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Left - Content -->
+                <div class="animate-slide-in-left">
+                    <h2 class="text-dark text-3xl md:text-4xl font-semibold mb-6">What People Are Saying About Us</h2>
+                    <blockquote class="text-dark text-xl mb-8 leading-relaxed italic">
+                        "They are have a perfect touch for make something so professional, interest and useful for a lot
+                        of people."
+                    </blockquote>
+
+                    <div class="flex items-center space-x-4 mb-8">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+                            alt="Josh Smith" class="w-16 h-16 rounded-full object-cover">
+                        <div>
+                            <h4 class="text-dark font-semibold text-lg">Josh Smith</h4>
+                            <p class="text-dark/50 text-sm">Manager of The New York Times</p>
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-4">
+                        <button
+                            class="w-12 h-12 bg-primary rounded-full shadow-lg flex items-center justify-center hover:bg-primary/80 transition-colors duration-300">
+                            <i class="fas fa-chevron-left text-white"></i>
+                        </button>
+                        <button
+                            class="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors duration-300">
+                            <i class="fas fa-chevron-right text-dark"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right - Image -->
+                <div class="animate-slide-in-right">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                            alt="Testimonial Background" class="w-full rounded-lg shadow-2xl">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta" class="py-24 md:py-32 lg:py-40 relative overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0">
+            <img src="images/lamp.png" alt="Modern Pendant Lamp" class="w-full h-full object-cover">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 relative z-10">
+            <div class="text-center max-w-2xl mx-auto">
+                <h2 class="text-white text-3xl md:text-4xl font-semibold mb-2 animate-slide-up leading-tight">
+                    Get more discount
+                </h2>
+                <h2 class="text-white text-3xl md:text-4xl font-semibold mb-6 animate-slide-up leading-tight">
+                    Off your order
+                </h2>
+                <p class="text-white text-lg mb-8 animate-slide-up" style="animation-delay: 0.1s;">Join our mailing list
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto animate-slide-up"
+                    style="animation-delay: 0.2s;">
+                    <input type="email" placeholder="Your email address"
+                        class="flex-1 px-6 py-4 rounded-lg bg-white text-dark placeholder-dark/50 focus:outline-none focus:ring-2 focus:ring-white">
+                    <button
+                        class="bg-dark text-white px-8 py-4 rounded-lg font-semibold hover:bg-dark/80 transition-colors duration-300 transform hover:scale-105">
+                        Shop Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-16">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                <!-- Brand -->
+                <div class="lg:col-span-1">
+                    <h3 class="text-2xl font-bold mb-6">FurniShop</h3>
+                </div>
+
+                <!-- Our Products -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Our Products</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-primary transition-colors duration-300">The Support Suite</a>
+                        </li>
+                        <li><a href="#" class="hover:text-primary transition-colors duration-300">The Sales Suite</a>
+                        </li>
+                        <li><a href="#" class="hover:text-primary transition-colors duration-300">Support</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors duration-300">Guide</a></li>
+                    </ul>
+                </div>
+
+                <!-- Top Features -->
+                <div>
+                    <h4 class="text-lg font-medium mb-4">Top Features</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-primary transition-colors duration-300">Ticketing System</a>
+                        </li>
+                        <li><a href="#" class="hover:text-primary transition-colors duration-300">Knowledge Base</a>
+                        </li>
+                        <li><a href="#" class="hover:text-primary transition-colors duration-300">Community Forums</a>
+                        </li>
+                        <li><a href="#" class="hover:text-primary transition-colors duration-300">Help Desk Software</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-primary transition-colors duration-300">Product Support</a>
+                        </li>
+                        <li><a href="#" class="hover:text-primary transition-colors duration-300">Request Demo</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors duration-300">Library</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors duration-300">Peoplepower Blog</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Company</h4>
+                    <ul class="space-y-3 text-sm mb-6">
+                        <li><a href="#" class="hover:text-primary transition-colors duration-300">About Us</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors duration-300">Press</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors duration-300">Investors</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors duration-300">Events</a></li>
+                    </ul>
+
+                    <!-- Social Icons -->
+                    <div class="flex space-x-3">
+                        <a href="#"
+                            class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors duration-300">
+                            <i class="fab fa-instagram text-sm"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors duration-300">
+                            <i class="fab fa-facebook text-sm"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors duration-300">
+                            <i class="fab fa-twitter text-sm"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors duration-300">
+                            <i class="fab fa-github text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom -->
+            <div class="border-t border-white/10 pt-8 text-center">
+                <p class="text-sm">&copy; NameBrand 2022 - All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="dist/script.min.js"></script>
+</body>
+
+</html>
